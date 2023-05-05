@@ -21,7 +21,7 @@ class TicTacToe:
         return [i for i, spot in enumerate(self.board) if spot == ' ']
         # moves = []
         # for (i,spot) in numeral(self.board):
-        #     #['x', 'x', 'o'] --> [(0, 'x'), (1, 'x'), (2, 'o')]
+        #     #['X', 'X', 'O'] --> [(0, 'X'), (1, 'X'), (2, 'O')]
         #     if spot == ' ':
         #         moves.append(i)
         # return moves
