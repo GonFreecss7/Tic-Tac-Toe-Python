@@ -76,12 +76,12 @@ def play(game, x_player, o_player, print_game=True):
     if print_game:
         game.print_board_nums()
 
-    letter = 'x' # starting letter
+    letter = 'X' # starting letter
     # iterate while the game still has empty squares
     # (we don't have to worry about winner because we'll just return that wich breaks the loop)
     while game.empty_squares():
         #get the move from the appropiate player
-        if letter == '0':
+        if letter == 'O':
             square = o_player.get_move(game)
         else:
             square = x_player.get_move(game)
@@ -99,14 +99,14 @@ def play(game, x_player, o_player, print_game=True):
                   return letter
 
             #  after we made our move, we need to alternate letter
-            letter = '0' if letter == 'X' else 'X' # switches players
+            letter = 'O' if letter == 'X' else 'X' # switches players
             # if letter == 'X':
             #     letter = '0'
             # else:
             #     letter = 'X'
 
-        if print_game:
-            print('It\'s a tie!')
+    if print_game:
+        print('It\'s a tie!')
 
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
